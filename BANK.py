@@ -10,7 +10,7 @@ try:
         for line in file:
             acc_num,name,balance,pin = line.strip().split(",")
             atm[int(acc_num)] = [name,float(balance),int(pin)]
-except FileNotFoundError:
+except ValueError:
     pass
 
 def transactions(acc_num,message):
